@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>月入一个达不6 | 6达不6小队</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&display=swap');
+    :root{--bg:#0b0f17;--primary:#00e0fc;--text:#e4e4e4;--card:#121824;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Noto Sans SC',sans-serif;background:var(--bg) url("https://source.unsplash.com/1600x900/?night,campus") no-repeat center/cover fixed;color:var(--text);line-height:1.6;}
+    a{color:var(--primary);text-decoration:none;}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;background:rgba(0,0,0,.45);backdrop-filter:blur(8px);position:sticky;top:0;z-index:10;}
+    .logo{font-weight:700;font-size:1.25rem;letter-spacing:1px;}
+    .nav-links{list-style:none;display:flex;gap:1.5rem;}
+    .hero{height:70vh;display:flex;align-items:center;justify-content:center;text-align:center;flex-direction:column;}
+    .hero h1{font-size:3rem;margin-bottom:1rem;}
+    .btn{display:inline-block;margin-top:1.5rem;padding:.75rem 1.8rem;background:var(--primary);color:var(--bg);border-radius:30px;font-weight:700;transition:.3s;}
+    .btn:hover{background:#00a8c8;}
+    .container{width:90%;max-width:1100px;margin:auto;padding:3rem 0;text-align:center;}
+    .work-list{display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center;margin-top:2rem;}
+    .work-card{background:var(--card);border-radius:12px;overflow:hidden;width:300px;box-shadow:0 8px 20px rgba(0,0,0,.4);}
+    .work-card img{width:100%;height:180px;object-fit:cover;}
+    .work-card h3{margin:1rem;font-size:1.1rem;}
+    .work-card p{margin:0 1rem 1rem;font-size:.9rem;opacity:.8;}
+    footer{text-align:center;padding:2rem;font-size:.85rem;opacity:.6;}
+    @media(max-width:600px){.hero h1{font-size:2rem;}.nav-links{gap:1rem;}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="logo">月入6个达不6</a>
+    <ul class="nav-links">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="about.html">关于我们</a></li>
+      <li><a href="submit.html">投稿</a></li>
+    </ul>
+  </nav>
+  <header class="hero">
+    <h1>记录校园夜归人</h1>
+    <p>六行小队用镜头与数据，讲述期末夜间的故事。</p>
+    <a href="submit.html" class="btn">投稿/加入</a>
+  </header>
+  <section class="container">
+    <h2>最新作品</h2>
+    <div class="work-list">
+      <div class="work-card">
+        <img src="https://source.unsplash.com/600x400/?night,campus" alt="夜归人">
+        <h3>《校园夜归人》短片</h3>
+        <p>3分钟竖屏纪实 · 播放量 1.2 万</p>
+      </div>
+      <div class="work-card">
+        <img src="https://source.unsplash.com/600x400/?library,student" alt="图书馆">
+        <h3>凌晨的图书馆</h3>
+        <p>图+数据 · 阅读量 2600</p>
+      </div>
+    </div>
+  </section>
+  <footer>© 2025 六达不6 | 本站部署于 GitHub Pages</footer>
+</body>
+</html>
