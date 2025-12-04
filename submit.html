@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>投稿 - 月入6个达不6</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root{--bg:#0b0f17;--primary:#00e0fc;--text:#e4e4e4;--card:#121824;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Noto Sans SC',sans-serif;background:var(--bg) url("https://source.unsplash.com/1600x900/?night,typewriter") no-repeat center/cover fixed;color:var(--text);line-height:1.8;}
+    a{color:var(--primary);text-decoration:none;}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;background:rgba(0,0,0,.45);backdrop-filter:blur(8px);}
+    .logo{font-weight:700;font-size:1.25rem;letter-spacing:1px;}
+    .nav-links{list-style:none;display:flex;gap:1.5rem;}
+    .container{width:90%;max-width:700px;margin:auto;padding:4rem 2rem;background:rgba(18,24,36,.85);border-radius:12px;margin-top:3rem;}
+    h1{margin-bottom:1rem;} form{display:flex;flex-direction:column;gap:1.2rem;margin-top:2rem;}
+    input,select,textarea{padding:.7rem;border-radius:6px;border:1px solid #333;background:var(--card);color:var(--text);font-size:1rem;}
+    button{padding:.7rem;border:none;border-radius:6px;background:var(--primary);color:var(--bg);font-weight:700;cursor:pointer;}
+    button:hover{background:#00a8c8;} .tip{margin-top:1rem;font-size:.85rem;opacity:.7;}
+    footer{text-align:center;padding:2rem;font-size:.85rem;opacity:.6;}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="logo">月入6个达不6</a>
+    <ul class="nav-links">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="about.html">关于我们</a></li>
+      <li><a href="submit.html">投稿</a></li>
+    </ul>
+  </nav>
+  <section class="container submit">
+    <h1>投稿与加入</h1>
+    <p>欢迎夜归人、摄影爱好者、数据玩家一起折腾！</p>
+    <form id="submitForm">
+      <label>类型
+        <select name="type" required>
+          <option value="photo">摄影/图集</option>
+          <option value="article">文字稿件</option>
+          <option value="video">短视频</option>
+          <option value="join">申请加入</option>
+        </select>
+      </label>
+      <label>标题/主题<input type="text" name="title" required></label>
+      <label>正文（可贴外链或说明）<textarea name="content" rows="6" required></textarea></label>
+      <label>附件链接（Google/百度网盘）<input type="url" name="attach" placeholder="https://..."></label>
+      <label>署名<input type="text" name="author" required></label>
+      <label>联系邮箱<input type="email" name="email" required></label>
+      <button type="submit">发送</button>
+    </form>
+    <p class="tip">提交即视为同意我们使用你的作品进行非商业展映与教学汇报，署名默认为你填写姓名。</p>
+  </section>
+  <footer>© 2025 六行小队</footer>
+  <script>
+    document.getElementById('submitForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      fetch('https://formsubmit.co/ajax/3156437167@qq.com', {
+        method: 'POST',
+        body: new FormData(this),
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(r => r.json())
+      .then(() => { alert('投稿成功！我们会在 48h 内回复。'); this.reset(); })
+      .catch(() => { alert('网络错误，请重试或邮件联系：3156437167@qq.com'); });
+    });
+  </script>
+</body>
+</html>
